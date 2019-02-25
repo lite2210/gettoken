@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label>List Acc ID ({{inputData.split('\n').length || 0}})</label>
+                <textarea class="form-control" ng-model="inputData" rows="5" placeholder="10000012312319845&#10;10000123812391299"></textarea>
+            </div>
+            <div class="form-group col-sm-12">
+                <label></label>
+                <button class="btn btn-info pull-right" ng-click="checkLive()">Check</button>
+                <button class="btn btn-success" ng-click="checkLive2()">Check2</button>
+                <span>{{msg}}</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label>Live ({{liveAcc.split('\n').length || 0}})</label>
+                <textarea ng-model="liveAcc" class="form-control" rows="5"></textarea>
+            </div>
+            <div class="form-group col-sm-6">
+                <label>Dead ({{deadAcc.split('\n').length || 0}})</label>
+                <textarea ng-model="deadAcc" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="form-group">
+            <!-- <label>Result</label> -->
+            <table class="table table-striped table-hover table-live-account">
+                <thead>
+                    <tr>
+                        <th class="col-no-serial">No.</th>
+                        <th class="select-all-head">
+                            <div class="checkbox">
+                                <input type="checkbox" class="cb-select-all-account" id="select-all-account">
+                                <label for="select-all-account">
+                                    Name
+                                </label>
+                            </div>
+                        </th>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="account in accounts">
+                        <td style="padding-left: 5px; padding-right: 5px;">
+                            {{$index + 1}}
+                        </td>
+                        <td style="padding: 0px; vertical-align: inherit;">
+                            <div class="checkbox">
+                                <input type="checkbox" class="cb-friend" ng-model="account.selected" id="select-detail-{{$index}}">
+                                <label for="select-detail-{{$index}}" ng-click="$event.stopPropagation()">
+                                    <img style="height: 25px;" ng-src="https://graph.facebook.com/{{account.accId}}/picture?type=square" />
+                                    <a ng-href="https://fb.com/{{account.accId}}" target="_blank">{{account.accName}}</a>
+                                    <a ng-href="https://fb.com/profile.php?id={{account.accId}}&sk=likes" target="_blank">
+	                                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                                </a>
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            {{account.accId}}
+                        </td>
+                        <td>
+                            <label class="label" ng-class="{'label-info': account.stt == 'ALIVE', 'label-danger': account.stt == 'DEAD'}">
+                                {{account.stt}}
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label>Json from MongoDB</label>
+            <textarea class="form-control" rows="5" ng-model="dataMongo" ng-change="getAccIdByRegex()"></textarea>
+        </div>
+        <div class="form-group col-sm-9">
+            <label></label>
+            <button class="btn btn-info pull-right" ng-click="moveIdToCheckLive()"><< Check</button>
+        </div>
+        <div class="form-group col-sm-3">
+            <label></label>
+            <button class="btn btn-info pull-right" ng-click="getAccIdByRegex()">Get ID</button>
+        </div>
+        
+        <div class="form-group">
+            <label>Result ({{listId.split('\n').length || 0}})</label>
+            <textarea class="form-control" rows="5" ng-model="listId"></textarea>
+        </div>
+    </div>
+
+</div>

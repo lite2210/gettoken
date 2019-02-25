@@ -1,0 +1,261 @@
+*, .form-control {
+    font-size: 12px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+body, html {
+    height: 100%;
+}
+
+nav.sidebar, .main {
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+.main {
+    padding: 10px 10px 0 10px;
+}
+
+@media (min-width: 765px) {
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .content {
+        margin-left: 40px;
+    }
+
+    .main {
+        position: absolute;
+        width: calc(100% - 40px);
+        margin-left: 40px;
+        float: right;
+    }
+
+    nav.sidebar:hover + .main {
+        margin-left: 200px;
+    }
+
+    nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    nav.sidebar a {
+        padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child {
+        border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li {
+        border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
+        padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+
+    nav.sidebar {
+        width: 200px;
+        height: 100%;
+        margin-left: -160px;
+        float: left;
+        margin-bottom: 0px;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    nav.sidebar li {
+        width: 100%;
+    }
+
+    nav.sidebar:hover {
+        margin-left: 0px;
+    }
+
+    .forAnimate {
+        opacity: 0;
+    }
+}
+
+/*@media (min-width: 1330px) {*/
+
+/*.main {*/
+/*width: calc(100% - 200px);*/
+/*margin-left: 200px;*/
+/*}*/
+
+/*nav.sidebar {*/
+/*margin-left: 0px;*/
+/*float: left;*/
+/*}*/
+
+/*nav.sidebar .forAnimate {*/
+/*opacity: 1;*/
+/*}*/
+/*}*/
+
+nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover, nav.sidebar .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+
+nav:hover .forAnimate {
+    opacity: 1;
+}
+
+section {
+    padding-left: 15px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-singleAccount.table > tbody > tr > td {
+    padding: 4px;
+}
+
+.table-singleAccount textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.top-buffer {
+    margin-top: 5px;
+}
+
+.child-no-padding div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popover {
+    max-width: 1000px;
+}
+
+.popover-content {
+    word-wrap: break-word;
+}
+
+.table {
+    font-size: 12px;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.table .checkbox, .table .radio {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.table > tbody > tr > th {
+    padding: 4px;
+}
+
+.select-all-head {
+    vertical-align: bottom;
+    padding-bottom: 8px !important;
+}
+
+.select-all-head label {
+    font-weight: bold;
+}
+
+.table .checkbox label {
+    min-height: 0;
+}
+
+.col-no-serial {
+    width: 40px;
+}
+
+.col-count {
+    width: 45px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.block-step > div {
+    padding: 0;
+}
+
+.block-step > div:first-child {
+    margin-top: -5px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.list-group-share .checkbox {
+    margin: 0;
+}
+
+.table-fast-share > tbody > tr > td, .table-fast-share > thead > tr > td, .table-fast-share > thead > tr > th {
+    padding: 5px;
+}
+
+.table-campaign-detail.table td{
+    overflow: inherit;
+}
+
+.table-campaign-detail.table>tbody>tr>td{
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.table-campaign-detail.table .form-control{
+    height: 30px;
+}
+
+.blacklist {
+    background-color: blanchedalmond !important;
+}

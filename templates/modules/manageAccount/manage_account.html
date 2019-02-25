@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="form-group">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Data (separator = |, tab)</label>
+                <textarea class="form-control" ng-model="inputData" rows="5" placeholder="abc.proxy.com|3128|myusername|andpassword|mark.zuck@gmail.com|123456"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info pull-right" ng-click="importAccount()">Import</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover table-simple" st-safe-src="campaignDetailArrSimple" st-table="campaignDetailArrSimpleInit">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Account</th>
+            <th>Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(fbAccountId, obj) in campaignDetailArrSimpleInit[0] as arr">
+            <td>
+                {{$index + 1}}
+            </td>
+            <td>
+                <a ng-href="https://facebook.com/{{fbAccountId}}" target="_blank">{{ obj.fbAccountName || 'empty' }}</a>
+                <br/> {{(obj.groups | filter:{status:'SUCCESS'}).length }} / {{obj.groups.length }}
+            </td>
+            <td>
+                <span ng-repeat="group in obj.groups">
+                    <label class="label label-info label-group-hover" ng-click="showMessageInfo(group.message, group.status)" data-toggle="tooltip"
+                        title="{{group.message}}" ng-class="{'label-danger': group.status == 'ERROR', 'label-success': group.status == 'SUCCESS'}">
+                        {{ group.fbGroupName || 'empty' }}
+                    </label>
+                    <span>&nbsp;</span>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6" class="text-center">
+                <div st-pagination="" st-items-by-page="rowPerPageModel" st-displayed-pages="10"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

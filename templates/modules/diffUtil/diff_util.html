@@ -1,0 +1,23 @@
+<div class="col-sm-12">
+    <div class="form-group col-sm-4">
+        <label>Array A ({{sourceInput ? sourceInput.split('\n').length : 0}})</label>
+        <textarea class="form-control" rows="6" ng-model="sourceInput"></textarea>
+    </div>
+    <div class="form-group col-sm-4">
+        <label>Array B ({{targetInput ? targetInput.split('\n').length : 0}})</label>
+        <textarea class="form-control" rows="6" ng-model="targetInput"></textarea>
+    </div>
+    <div class="form-group col-sm-4">
+        <label>Result = A - B ({{desInput ? desInput.split('\n').length : 0}})</label>
+        <textarea class="form-control" rows="6" ng-model="desInput"></textarea>
+    </div>
+    <div class="form-group col-sm-2">
+        <button class="btn btn-info col-sm-12" ng-click="getDiff()">Get Diff</button>
+    </div>
+    <div class="form-group col-sm-2">
+        <button class="btn btn-info col-sm-12" ng-click="uniqueSource()">Unique</button>
+    </div>
+    <div class="form-group col-sm-2">
+        <button class="btn btn-info col-sm-12" ng-click="getSame()">Same</button>
+    </div>
+</div>

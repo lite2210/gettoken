@@ -1,0 +1,305 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap.block-grid/latest/bootstrap3-block-grid.min.css">
+    <link rel="stylesheet" href="assets/css/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.6/css/ngDialog-theme-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.6/css/ngDialog-theme-plain.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.6/css/ngDialog.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-datetimepicker/1.1.3/css/datetimepicker.min.css">
+
+</head>
+
+<body ng-app="fbSupport" ng-cloak>
+    <!--
+  Your HTML content here
+-->
+
+    <nav class="navbar navbar-default sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1" ng-mouseover="hoverIn()">
+                <ul class="nav navbar-nav">
+                    <li class="active hidden">
+                        <a href="/index.html#/">
+                            Home
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#manageAccount">
+                            Accounts
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-list-ul">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#manageGroup">
+                            Groups
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-object-group">
+
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#fastShare">
+                            Fast Share
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-share-square-o">
+                            </span>
+                        </a>
+                    </li>
+
+
+                    <li class="hidden">
+                        <a href="#reactPost">
+                            Like Comment
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-superpowers">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#reactUserPost">
+                            React User
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-superpowers">
+                            </span>
+                        </a>
+                    </li>
+
+
+                    <li class="hidden">
+                        <a href="#cookieFunction">
+                            Cookie Function
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-codiepie">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#diff">
+                            Diff
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-diamond">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#checkToken">
+                            Check Token
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-binoculars">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#crawlProfileGroup">
+                            Profile Group
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-binoculars">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#tokenAddGroup">
+                            Token Add Group
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-snowflake-o">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="hidden">
+                        <a href="#addGroup">
+                            Add Group V2
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-puzzle-piece">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#createCampaign">
+                            Create Campaign
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-free-code-camp">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#manageAccount">
+                            Manage Account
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-free-code-camp">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#getToken">
+                            Get Token
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-free-code-camp">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#checkLive">
+                            Check Live
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-check-circle">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#friendRequest">
+                            Friend Request
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-user-plus">
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#changeInfo">
+                            Change Info
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-eraser">
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#checkGroup">
+                            Check Group
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-file-text">
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#spygroups">
+                            Spy Groups
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-user-secret">
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#findlinks">
+                            Find Links
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-link">
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#testtoken">
+                            Test Token
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-user-secret">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios
+                            <span class="caret"></span>
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+                        </a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li>
+                                <a href="#">Crear</a>
+                            </li>
+                            <li>
+                                <a href="#">Modificar</a>
+                            </li>
+                            <li>
+                                <a href="#">Reportar</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">Informes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden">
+                        <a href="#">Libros
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span>
+                        </a>
+                    </li>
+                    <li class="hidden">
+                        <a href="#">Tags
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content content-collapse">
+        <div ng-view></div>
+        <toaster-container></toaster-container>
+    </div>
+
+    <!-- AngularJS Library -->
+    <script src="assets/libs/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-md5/0.1.10/angular-md5.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.8/angular-touch.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- latest bootstrap-switch release -->
+    <link rel="stylesheet" href="https://rawgit.com/nostalgiaz/bootstrap-switch/master/dist/css/bootstrap3/bootstrap-switch.css">
+
+    <!-- latest bootstrap-switch release -->
+    <script src="https://rawgit.com/nostalgiaz/bootstrap-switch/master/dist/js/bootstrap-switch.js"></script>
+
+    <script src="https://rawgit.com/frapontillo/angular-bootstrap-switch/develop/common/module.js"></script>
+    <script src="https://rawgit.com/frapontillo/angular-bootstrap-switch/develop/src/directives/bsSwitch.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.6/js/ngDialog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-datetimepicker/1.1.3/js/datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-datetimepicker/1.1.3/js/datetimepicker.templates.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.9/smart-table.min.js"></script>
+
+    <script src="js/lib/dateTimeInput.js"></script>
+
+    <!-- Your application options.js  -->
+    <script src="js/ng-app.js"></script>
+    <script src="modules/util/UtilService.js"></script>
+    <script src="modules/util/directive.js"></script>
+    <script src="modules/util/SimpleService.js"></script>
+
+    <script src="modules/diffUtil/DiffUtilController.js"></script>
+
+    <script src="modules/getToken/GetTokenController.js"></script>
+    <script src="modules/getToken/GetTokenService.js"></script>
+
+    <script src="modules/checkLive/CheckLiveController.js"></script>
+    <script src="modules/checkLive/CheckLiveService.js"></script>
+
+
+    <script src="modules/diffUtil/DiffUtilController.js"></script>
+
+    <script src="modules/manageAccount/ManageAccountController.js"></script>
+    <script src="modules/manageAccount/ManageAccountService.js"></script>
+</body>
+
+</html>
